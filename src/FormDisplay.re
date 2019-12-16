@@ -1,6 +1,6 @@
 open Types;
 
-let eventValue = evt => ReactEvent.Form.target(evt)##value;
+let eventValue = evt => evt->ReactEvent.Form.target##value;
 
 [@react.component]
 let make = () => {
@@ -30,7 +30,7 @@ let make = () => {
           name="hobby"
           className="form-control"
           value=hobby
-          onChange={evt => setHobby(evt->eventValue)}>
+          onChange={evt => evt->eventValue->setHobby}>
           <option value="cooking"> {React.string("cooking")} </option>
           <option value="running"> {React.string("running")} </option>
           <option value="coding"> {React.string("coding")} </option>

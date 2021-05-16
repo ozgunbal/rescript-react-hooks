@@ -1,4 +1,4 @@
-# ReasonReact Example with Hooks
+# Rescript Example with Hooks
 
 This is:
 

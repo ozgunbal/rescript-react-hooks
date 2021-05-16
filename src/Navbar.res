@@ -1,9 +1,9 @@
-[@react.component]
+@react.component
 let make = () => {
   let onNavClick = evt => {
     ReactEvent.Mouse.preventDefault(evt);
-    let targetUrl = ReactEvent.Mouse.target(evt)##href;
-    ReasonReactRouter.push(targetUrl);
+    let targetUrl = ReactEvent.Mouse.target(evt)["href"]
+    RescriptReactRouter.push(targetUrl);
   };
 
   <nav className="navbar navbar-dark bg-dark">

@@ -1,4 +1,4 @@
-[@react.component]
+@react.component
 let make =
     (
       ~label,
@@ -8,7 +8,7 @@ let make =
       ~labelClass="",
       ~inputType,
       ~value,
-      ~checked: option(bool)=?,
+      ~checked: option<bool>=?,
       ~onChange,
     ) => {
   <div className=containerClass>

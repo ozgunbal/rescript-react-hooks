@@ -1,4 +1,4 @@
-## ReasonReact Problems and Approaches
+## Rescript Problems and Approaches
 
 - Prop spreading -> Not Possible by design
 - Default prop:
@@ -19,15 +19,15 @@ let make = (~containerClass=?) => {...}
 - Event handling:
 
 ```re
-<button onClick={evt => setSomething(ReactEvent.Form.target(evt)##value} />
+<button onClick={evt => setSomething(ReactEvent.Form.target(evt)["value"]} />
 // or
-<button onClick={evt => evt->ReactEvent.Form.target##value->setSomething} />
+<button onClick={evt => ReactEvent.Form.target(evt)["value"]->setSomething} />
 ```
 
 - Optional prop usage:
 
 ```re
-let make = (~checked: option(bool)=?) => {
+let make = (~checked: option<bool>=?) => {
   <input ?checked />
 }
 ```

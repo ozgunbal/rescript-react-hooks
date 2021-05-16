@@ -2,29 +2,28 @@
   "name": "reason-react-hooks",
   "version": "0.1.0",
   "scripts": {
-    "build": "bsb -make-world",
-    "start": "bsb -make-world -w -ws _ ",
-    "clean": "bsb -clean-world",
-    "server": "moduleserve ./ --port 8000 --spa",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-bundle": "webpack"
+    "re:build": "rescript",
+    "re:start": "rescript build -w",
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "BuckleScript",
-    "ReasonReact",
-    "reason-react"
+    "Rescript"
   ],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
-    "reason-react": ">=0.7.0"
+    "@rescript/react": "^0.10.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "bs-platform": "^7.0.1",
+    "bs-platform": "^9.0.2",
     "moduleserve": "^0.9.0",
-    "webpack-cli": "^3.3.10",
-    "webpack": "^4.41.2"
+    "rescript": "^9.1.2",
+    "snowpack": "^3.4.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }

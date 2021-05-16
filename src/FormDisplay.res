@@ -1,8 +1,8 @@
 open Types;
 
-let eventValue = evt => evt->ReactEvent.Form.target##value;
+let eventValue = evt => ReactEvent.Form.target(evt)["value"];
 
-[@react.component]
+@react.component
 let make = () => {
   let (_, dispatch) = UserContext.useForm();
   let (name, setName) = React.useState(_ => "");
@@ -46,7 +46,7 @@ let make = () => {
         labelClass="form-check-label"
         value={string_of_bool(idFlag)}
         checked=idFlag
-        onChange={evt => setIdFlag(ReactEvent.Form.target(evt)##checked)}
+        onChange={evt => setIdFlag(ReactEvent.Form.target(evt)["checked"])}
       />
       {idFlag
          ? <Field

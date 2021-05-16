@@ -1,4 +1,4 @@
-[@react.component]
+@react.component
 let make = (~form: Types.form) => {
   <div>
     {React.string(

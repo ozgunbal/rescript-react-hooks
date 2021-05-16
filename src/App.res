@@ -17,7 +17,7 @@ let reducer = (_, action) =>
   | SubmitForm(userForm) => {form: userForm}
   };
 
-[@react.component]
+@react.component
 let make = () => {
   let (state, dispatch) = React.useReducer(reducer, initialState);
 

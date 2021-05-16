@@ -1,11 +1,10 @@
-[@react.component]
+@react.component
 let make =
     (
       ~label,
       ~id,
       ~children,
       ~containerClass="form-group",
-      ~inputClass="form-control",
       ~labelClass="",
     ) => {
   <div className=containerClass>
